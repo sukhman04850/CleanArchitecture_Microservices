@@ -41,11 +41,11 @@ namespace CartAPI.Controllers
 
         [HttpGet("GettAll/{userID}")]
 
-        public IActionResult GettCartById(Guid userID)
+        public IActionResult GettCartById(Guid userId)
         {
             try
             {
-                var cart = _cartService.GetCartItems(userID);
+                var cart = _cartService.GetCartItems(userId);
                 return Ok(cart);
             }
             catch (Exception ex)
